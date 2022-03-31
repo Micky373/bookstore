@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+li,
+a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 5rem;
+  gap: 35rem;
+}
+
+.nav_links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.catagories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+}
+
+.status_button {
+  height: 3rem;
+  font-size: larger;
+}
+
+.books_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 30rem;
+}
+
+.add_book {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
