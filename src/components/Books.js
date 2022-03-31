@@ -12,7 +12,6 @@ const Books = () => {
   return (
     <div className="books_container">
       <Book title={title} author={author} />
-      <button className="remove_button" type="button">Remove</button>
       <AddBook />
     </div>
   );

@@ -7,6 +7,7 @@ const Book = (props) => {
     <div className="book">
       <h1 className="book_title">{title}</h1>
       <h1 className="book_author">{author}</h1>
+      <button className="remove_button" type="button">Remove</button>
     </div>
   );
 };
