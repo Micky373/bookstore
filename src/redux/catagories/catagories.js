@@ -1,7 +1,7 @@
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
-const initialState = [];
+const initialState = ['UNDER CONSTRUCTION'];
 
-export const checkStatus = (id) => ({
+export const checkStatus = (id = 1) => ({
   type: CHECK_STATUS,
   payload: id,
 });
