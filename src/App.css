@@ -25,6 +25,7 @@ nav {
 
 .catagories {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 20rem;
@@ -41,7 +42,9 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  height: 30rem;
+  padding: 2rem;
+
+  /* height: 30 rem; */
 }
 
 .add_book form {
