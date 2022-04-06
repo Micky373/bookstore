@@ -1,5 +1,5 @@
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const initialState = [];
 
 export const addBook = (book) => ({
@@ -17,7 +17,7 @@ const bookReducer = (state = initialState, action) => {
     case ADD_BOOK: return [
       ...state,
       {
-        id: 1,
+        id: state.length + 1,
         title: action.payload.title,
         author: action.payload.author,
       },
