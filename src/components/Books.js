@@ -1,17 +1,17 @@
-import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import AddBook from './AddBook';
 
-const BookToBeDesplayed = {
-  title: 'Book1',
-  author: 'Author1',
-};
-
 const Books = () => {
-  const { title, author } = BookToBeDesplayed;
+  const bookState = useSelector((state) => state.books);
+
   return (
     <div className="books_container">
-      <Book title={title} author={author} />
+      {bookState.map((books) => (
+        <div key={books.id}>
+          <Book author={books.author} title={books.title} id={books.id} />
+        </div>
+      ))}
       <AddBook />
     </div>
   );

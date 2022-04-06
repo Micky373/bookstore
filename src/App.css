@@ -44,7 +44,7 @@ nav {
   height: 30rem;
 }
 
-.add_book {
+.add_book form {
   display: flex;
   gap: 1rem;
   margin-top: 3rem;
