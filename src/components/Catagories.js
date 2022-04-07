@@ -9,7 +9,7 @@ const Catagories = () => {
   const showStatus = () => {
     dispatch(checkStatus());
     SetDisplay(true);
-    setTimeout(() => SetDisplay(false), 4000);
+    setTimeout(() => SetDisplay(false), 2000);
   };
   return (
     <div className="catagories">
