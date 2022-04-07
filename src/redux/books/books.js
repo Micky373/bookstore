@@ -1,51 +1,113 @@
-const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
-const initialState = [
-  {
-    id: 1,
-    title: 'Book 1',
-    author: 'Author 1',
-  },
-  {
-    id: 2,
-    title: 'Book 2',
-    author: 'Author 2',
-  },
-  {
-    id: 3,
-    title: 'Book 3',
-    author: 'Author 3',
-  },
-];
+import axios from 'axios';
 
-export const addBook = (book) => ({
-  type: ADD_BOOK,
-  payload: book,
+const FETCH_BOOKS_REQUEST = 'FETCH_BOOKS_REQUEST';
+const FETCH_BOOKS_SUCCESS = 'FETCH_BOOKS_SUCCESS';
+const FETCH_BOOKS_FAILURE = 'FETCH_BOOKS_FAILURE';
+const POST_BOOK = 'POST_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
+
+const initialState = {
+  loading: false,
+  books: [],
+  error: '',
+};
+
+const fetchBooksRequest = () => ({
+  type: FETCH_BOOKS_REQUEST,
 });
 
-export const removeBook = (id) => ({
+const fetchBooksSuccess = (listOfBooks) => ({
+  type: FETCH_BOOKS_SUCCESS,
+  payload: listOfBooks,
+});
+
+const fetchBooksFailure = (error) => ({
+  type: FETCH_BOOKS_FAILURE,
+  payload: error,
+});
+
+const postBookSuccess = () => ({
+  type: POST_BOOK,
+});
+
+const removeBookSuccess = () => ({
   type: REMOVE_BOOK,
-  payload: id,
 });
+
+export const getBooks = () => async (dispatch) => {
+  dispatch(fetchBooksRequest());
+  try {
+    const response = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/W1sKmwT25SlhRhlfLR9M/books');
+    const bookLists = response.data;
+    const books = Object.entries(bookLists).map(([key, value]) => ({
+      id: key,
+      title: value[0].title,
+      author: value[0].author,
+      genre: value[0].category,
+    }));
+    dispatch(fetchBooksSuccess(books));
+  } catch (error) {
+    dispatch(fetchBooksFailure(error.message));
+  }
+};
+
+export const postBook = (book) => async (dispatch) => {
+  dispatch(fetchBooksRequest());
+  try {
+    await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/W1sKmwT25SlhRhlfLR9M/books', book);
+    dispatch(postBookSuccess());
+    dispatch(getBooks());
+  } catch (error) {
+    dispatch(fetchBooksFailure(error.message));
+  }
+};
+
+export const removeBook = (id) => async (dispatch) => {
+  dispatch(fetchBooksRequest());
+  try {
+    await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/W1sKmwT25SlhRhlfLR9M/books/${id}`, {
+      item_id: id,
+    });
+    console.log(id);
+    dispatch(removeBookSuccess());
+    dispatch(getBooks());
+  } catch (error) {
+    dispatch(fetchBooksFailure(error.message));
+  }
+};
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_BOOK: return [
+    case FETCH_BOOKS_REQUEST: return {
       ...state,
-      {
-        id: state.length + 1,
-        title: action.payload.title,
-        author: action.payload.author,
-      },
-    ];
-    case REMOVE_BOOK: {
-      const newState = [...state];
-      newState.splice(action.payload - 1, 1);
-      for (let i = 0; i < newState.length; i += 1) {
-        newState[i].id = i + 1;
-      }
-      return newState;
-    }
+      loading: true,
+    };
+
+    case FETCH_BOOKS_SUCCESS: return {
+      ...state,
+      loading: false,
+      books: [action.payload],
+      error: '',
+    };
+
+    case FETCH_BOOKS_FAILURE: return {
+      ...state,
+      books: [],
+      error: action.payload,
+    };
+
+    case REMOVE_BOOK: return {
+      ...state,
+      loading: false,
+      error: '',
+    };
+
+    case POST_BOOK: return {
+      ...state,
+      loading: false,
+      error: '',
+    };
+
     default: return state;
   }
 };
