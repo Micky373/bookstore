@@ -66,7 +66,6 @@ export const removeBook = (id) => async (dispatch) => {
   dispatch(fetchBooksRequest());
   try {
     await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/W1sKmwT25SlhRhlfLR9M/books/${id}`);
-    console.log(id);
     dispatch(removeBookSuccess());
     dispatch(getBooks());
   } catch (error) {
