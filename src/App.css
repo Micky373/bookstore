@@ -2,25 +2,40 @@ body {
   margin: 0;
 }
 
+#root {
+  padding: 1rem 5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 li,
 a {
   text-decoration: none;
-  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color:#121212;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 3rem;
   align-items: center;
-  padding: 0 5rem;
-  gap: 35rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  height: 6rem;
+  background-color: #fff;
 }
 
 .nav_links {
   display: flex;
   list-style: none;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .catagories {
@@ -43,8 +58,6 @@ nav {
   align-items: center;
   gap: 1rem;
   padding: 2rem;
-
-  /* height: 30 rem; */
 }
 
 .add_book form {
