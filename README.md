@@ -4,26 +4,16 @@
 
 ## Screenshot
 
-![screenshot](./images/Desktop_screenshot.PNG)
+![screenshot](/src/images/Desktop_screenshot.PNG)
 
-<!--
-## Mobile Screenshot
+<!-- ## Live Demo
 
-![screenshot](./images/mobile_screenshot.jpg) -->
-
-## Live Demo
-
-Not available for this branch
-
-<!-- - `Deployment from Github` : [GitHub](https://Micky373.github.io/math_magicians)
-
-- `Deployment from Heroku` : [Heroku](https://micky-react-math-magicians.herokuapp.com/)
-
-- `Deployment from Netlify` : [Netlify](https://fascinating-custard-51c34c.netlify.app/) -->
+- [LiveDemo](https://6250253a619918713bd2d8a3--beamish-paprenjak-02606c.netlify.app/) -->
 
 ## Built With
 
 - React
+- Redux
 
 ## Getting Started
 

@@ -3,12 +3,30 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { postBook } from '../redux/books/books';
 
+const headerStyle = {
+  textTransform: 'uppercase',
+  marginLeft: '2rem',
+  marginTop: '8rem',
+  fontSize: '2rem',
+  color: '#888888',
+  fontStyle: 'bold',
+};
+
+const fontStyle = {
+  fontFamily: 'Montserrat, sans-serif',
+  padding: '0 2rem',
+  fontSize: '1.5rem',
+  color: '#888888',
+  width: '22rem',
+  height: '3rem',
+};
+
 const AddBook = () => {
   const [form, setForm] = useState({
     item_id: '',
     title: '',
     author: '',
-    category: 'Check',
+    category: '',
   });
 
   const titleChange = (e) => {
@@ -25,6 +43,13 @@ const AddBook = () => {
     });
   };
 
+  const catagoryChange = (e) => {
+    setForm({
+      ...form,
+      category: e.target.value,
+    });
+  };
+
   const dispatch = useDispatch();
 
   const submitBook = (e) => {
@@ -33,7 +58,7 @@ const AddBook = () => {
       item_id: uuidv4(),
       author: form.author,
       title: form.title,
-      category: 'Check',
+      category: form.category,
     };
     dispatch(postBook(theBook));
     form.author = '';
@@ -42,9 +67,19 @@ const AddBook = () => {
 
   return (
     <div className="add_book">
+      <h2 style={headerStyle}>Add new book</h2>
       <form onSubmit={(e) => submitBook(e)}>
-        <input className="author" placeholder="Author name" value={form.author} onChange={(e) => authorChange(e)} required />
-        <input className="title" placeholder="Book title" value={form.title} onChange={(e) => titleChange(e)} required />
+        <input className="author" style={fontStyle} placeholder="Author name" value={form.author} onChange={(e) => authorChange(e)} required />
+        <input className="title" style={fontStyle} placeholder="Book title" value={form.title} onChange={(e) => titleChange(e)} required />
+        <select style={fontStyle} onChange={(e) => catagoryChange(e)} required>
+          <option value="" disabled selected hidden>Please Choose...</option>
+          <option value="Education">Education</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Horror">Horror</option>
+        </select>
         <button className="add_button" type="submit">ADD BOOK</button>
       </form>
     </div>

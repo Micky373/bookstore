@@ -1,26 +1,64 @@
 body {
   margin: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: Montserrat, sans-serif;
+}
+
+button {
+  padding: 1rem;
+  background-color: #0290ff;
+  border-radius: 4px;
+  width: 10rem;
+  height: 3rem;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: larger;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  padding: 3rem 5rem;
+  height: max-content;
+}
+
+.app {
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fafafa;
+  border-radius: 4px;
+  padding: 0 0 4rem;
 }
 
 li,
 a {
   text-decoration: none;
-  font-size: 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 3rem;
   align-items: center;
-  padding: 0 5rem;
-  gap: 35rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  height: 6rem;
+  background-color: #fff;
 }
 
 .nav_links {
   display: flex;
   list-style: none;
   justify-content: space-between;
-  gap: 2rem;
+  align-items: center;
+  gap: 2.5rem;
 }
 
 .catagories {
@@ -31,24 +69,23 @@ nav {
   height: 20rem;
 }
 
-.status_button {
-  height: 3rem;
-  font-size: larger;
-}
-
 .books_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-
-  /* height: 30 rem; */
+  gap: 2rem;
+  padding: 3rem;
 }
 
 .add_book form {
   display: flex;
+  align-items: center;
+  margin-left: 2rem;
   gap: 1rem;
-  margin-top: 3rem;
+}
+
+.progressCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
