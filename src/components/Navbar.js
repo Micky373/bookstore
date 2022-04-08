@@ -28,7 +28,7 @@ const userLogoStyle = {
 
 const Navbar = () => (
   <nav>
-    <p style={HeaderStyle}>Bookstore CMS check</p>
+    <p style={HeaderStyle}>Bookstore CMS</p>
     <ul className="nav_links">
       <Link to="/"><li>Books</li></Link>
       <Link to="/Catagories"><li>Catagories</li></Link>
