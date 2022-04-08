@@ -8,7 +8,7 @@
 
 ## Live Demo
 
-- [LiveDemo](https://micky373.github.io/bookstore/)
+- [LiveDemo](https://redux-deployement.herokuapp.com/)
 
 ## Built With
 
