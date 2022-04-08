@@ -18,7 +18,7 @@ const userLogoStyle = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  marginLeft: '40rem',
+  marginLeft: '35rem',
   fontSize: '2rem',
   border: 'solid 1px #e8e8e8',
   padding: '0.5rem',
