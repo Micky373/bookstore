@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import './App.css';
 
 const App = () => (
-  <div className="App">
+  <div className="app">
     <Router>
       <Navbar />
       <Routes>
