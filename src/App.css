@@ -13,7 +13,6 @@ button {
   color: #fff;
   font-family: Montserrat, sans-serif;
   font-size: larger;
-  text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,9 +73,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem;
+  gap: 2rem;
+  padding: 3rem;
 }
 
 .add_book form {
@@ -84,4 +82,10 @@ nav {
   align-items: center;
   margin-left: 2rem;
   gap: 1rem;
+}
+
+.progressCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
