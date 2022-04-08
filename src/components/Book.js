@@ -53,7 +53,7 @@ const progressDescriptionStyle = {
   color: '#888888',
   fontSize: '1.3rem',
   fontStyle: 'normal',
-  margin: '1rem',
+  margin: ' 1rem 0.5rem',
 };
 
 const imageStyle = {
