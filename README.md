@@ -6,9 +6,9 @@
 
 ![screenshot](/src/images/Desktop_screenshot.PNG)
 
-## Live Demo
+<!-- ## Live Demo
 
-- [LiveDemo](https://6250253a619918713bd2d8a3--beamish-paprenjak-02606c.netlify.app/)
+- [LiveDemo](https://6250253a619918713bd2d8a3--beamish-paprenjak-02606c.netlify.app/) -->
 
 ## Built With
 
