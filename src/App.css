@@ -46,7 +46,7 @@ a {
 nav {
   display: flex;
   justify-content: flex-start;
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   height: 6rem;
