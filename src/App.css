@@ -4,6 +4,15 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333d29;
+}
+
 button {
   padding: 1rem;
   background-color: #0290ff;
