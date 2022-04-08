@@ -8,11 +8,7 @@
 
 ## Live Demo
 
-<!-- - `Deployment from Github` : [GitHub](https://Micky373.github.io/math_magicians)
-
-- `Deployment from Heroku` : [Heroku](https://micky-react-math-magicians.herokuapp.com/)
-
-- `Deployment from Netlify` : [Netlify](https://fascinating-custard-51c34c.netlify.app/) -->
+- [GitHub](https://deploy-preview-5--illustrious-kheer-206df9.netlify.app/)
 
 ## Built With
 
