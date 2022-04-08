@@ -18,12 +18,13 @@ const userLogoStyle = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  marginLeft: '25rem',
+  marginLeft: '40rem',
   fontSize: '2rem',
   border: 'solid 1px #e8e8e8',
   padding: '0.5rem',
   borderRadius: '50%',
   color: '#0290ff',
+  justifySelf: 'flex-end',
 };
 
 const Navbar = () => (

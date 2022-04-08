@@ -76,6 +76,23 @@ const generateRandomPercentile = () => {
   return (Math.floor(Math.random() * 100) + 1) + percent;
 };
 
+const lineDivStyle = {
+  width: '0.125rem',
+  height: '10rem',
+  margin: '1.125rem 3.688rem 0 4.938rem',
+  backgroundColor: '#e8e8e8',
+  display: 'flex',
+  alignItems: 'center',
+};
+
+const smallerLineDivStyle = {
+  width: '0.125rem',
+  height: '3rem',
+  backgroundColor: '#e8e8e8',
+  display: 'flex',
+  alignItems: 'center',
+};
+
 const Book = (props) => {
   const {
     title,
@@ -96,7 +113,9 @@ const Book = (props) => {
         <h1 className="book_author" style={authorStyle}>{author}</h1>
         <div style={buttonContainerStyle}>
           <button type="button" style={buttonStyle}>Comments</button>
+          <div style={smallerLineDivStyle} />
           <button className="remove_button" style={buttonStyle} type="button" id={id} onClick={(e) => remove(e.target.id)}>Remove</button>
+          <div style={smallerLineDivStyle} />
           <button type="button" style={buttonStyle}>Edit</button>
         </div>
       </div>
@@ -107,6 +126,7 @@ const Book = (props) => {
           <p style={completedFontStyle}>Completed</p>
         </div>
       </div>
+      <div style={lineDivStyle} />
       <div>
         <p style={progressDescriptionStyle}>CURRENT CHAPTER</p>
         <p style={progressDescriptionStyle}>Chapter 17</p>

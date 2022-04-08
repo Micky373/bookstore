@@ -17,7 +17,7 @@ const fontStyle = {
   padding: '0 2rem',
   fontSize: '1.5rem',
   color: '#888888',
-  width: '15rem',
+  width: '22rem',
   height: '3rem',
 };
 
