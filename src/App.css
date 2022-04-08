@@ -1,18 +1,41 @@
 body {
   margin: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: Montserrat, sans-serif;
+}
+
+button {
+  padding: 1rem;
+  background-color: #0290ff;
+  border-radius: 4px;
+  width: 10rem;
+  height: 3rem;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-size: larger;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #root {
-  padding: 1rem 5rem;
-  background-color: rgba(0, 0, 0, 0.05);
+  padding: 3rem 5rem;
+  height: max-content;  
+}
+
+.app{
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fafafa;
+  border-radius: 4px;
+  padding: 0 0 4rem;
 }
 
 li,
 a {
   text-decoration: none;
   text-transform: uppercase;
-  font-family: Montserrat;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -24,7 +47,7 @@ a {
 nav {
   display: flex;
   justify-content: flex-start;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   height: 6rem;
@@ -35,6 +58,7 @@ nav {
   display: flex;
   list-style: none;
   justify-content: space-between;
+  align-items: center ;
   gap: 2.5rem;
 }
 
@@ -44,11 +68,6 @@ nav {
   align-items: center;
   justify-content: center;
   height: 20rem;
-}
-
-.status_button {
-  height: 3rem;
-  font-size: larger;
 }
 
 .books_container {
@@ -62,6 +81,7 @@ nav {
 
 .add_book form {
   display: flex;
+  align-items: center;
+  margin-left: 2rem;
   gap: 1rem;
-  margin-top: 3rem;
 }
