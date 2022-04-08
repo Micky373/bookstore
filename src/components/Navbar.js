@@ -9,7 +9,8 @@ const HeaderStyle = {
   fontStyle: 'normal',
   lineHeight: 'normal',
   letterSpacing: 'normal',
-  color: '#0290ff',
+  // color: '#0290ff',
+  color: 'black',
 };
 
 const userLogoStyle = {
