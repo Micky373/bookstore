@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const HeaderStyle = {
   fontFamily: 'Montserrat',
-  fontSize: '2.5rem',
+  fontSize: '2rem',
   fontWeight: 'bold',
   fontStretch: 'normal',
   fontStyle: 'normal',
