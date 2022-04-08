@@ -4,16 +4,9 @@
 
 ## Screenshot
 
-![screenshot](./images/Desktop_screenshot.PNG)
-
-<!--
-## Mobile Screenshot
-
-![screenshot](./images/mobile_screenshot.jpg) -->
+![screenshot](/src/images/Desktop_screenshot.PNG)
 
 ## Live Demo
-
-Not available for this branch
 
 <!-- - `Deployment from Github` : [GitHub](https://Micky373.github.io/math_magicians)
 
@@ -24,6 +17,7 @@ Not available for this branch
 ## Built With
 
 - React
+- Redux
 
 ## Getting Started
 
