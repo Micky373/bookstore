@@ -8,7 +8,7 @@
 
 ## Live Demo
 
-- [LiveDemo](https://deploy-preview-5--illustrious-kheer-206df9.netlify.app/)
+- [LiveDemo](https://6250253a619918713bd2d8a3--beamish-paprenjak-02606c.netlify.app/)
 
 ## Built With
 
