@@ -1,6 +1,6 @@
 ## Book Store App
 
-> This is a bookstore website published with react and redux. It has display list of books, add books and also remove books functionalities.
+> This is a bookstore website published with react and redux. It has display list of books, add books and also remove books functionalities. All the books are stored on an API. All the adding, removing and getting the book list actions are done by usign the REST API.
 
 ## Screenshot
 
